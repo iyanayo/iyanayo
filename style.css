@@ -1,0 +1,44 @@
+:root{--g:#0E4D35;--y:#FFC21F;--r:#E8432B;--cream:#FFF6DD;--ink:#2B1608;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--cream);color:var(--ink);font:600 1.05rem/1.55 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bagel Fat One',Nunito,sans-serif;font-weight:400;margin:0;line-height:1}
+.dots{background-color:var(--y);background-image:radial-gradient(circle at 10px 10px,rgba(232,67,43,.22) 4px,transparent 5px),radial-gradient(circle at 30px 30px,rgba(14,77,53,.16) 3px,transparent 4px);background-size:40px 40px}
+.btn{display:inline-block;background:var(--r);color:var(--cream);text-decoration:none;font-weight:800;padding:.85rem 1.6rem;border-radius:3rem;box-shadow:0 4px 0 #9d2a18;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.btn.sm{padding:.5rem 1.1rem;font-size:.95rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;background:var(--g);color:var(--cream)}
+header b{font-family:'Bagel Fat One',sans-serif;font-weight:400;font-size:1.6rem}
+header a.btn{box-shadow:none;padding:.5rem 1.2rem}
+.hero{padding:3rem 5vw 4rem;display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center;overflow:hidden}
+.hero h1{font-size:clamp(4rem,12vw,9rem);color:var(--g);text-shadow:4px 4px 0 var(--cream),8px 8px 0 var(--r);margin-bottom:1.6rem}
+.hero h1 span{display:block;margin-left:.6em;transform:rotate(-3deg);transform-origin:left}
+.hero p{max-width:30rem;font-size:1.25rem;font-weight:800;margin:0 0 1.5rem}
+.collage{position:relative;aspect-ratio:1}
+.collage img{position:absolute;object-fit:cover;border:6px solid var(--cream);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.collage .a{left:0;top:4%;width:56%;aspect-ratio:1;border-radius:50%;transform:rotate(-4deg)}
+.collage .b{right:0;top:0;width:50%;aspect-ratio:1;border-radius:2rem;transform:rotate(5deg)}
+.collage .c{right:6%;bottom:2%;width:56%;aspect-ratio:1;border-radius:2rem;transform:rotate(-3deg)}
+.badge{position:absolute;left:4%;bottom:6%;width:7.5rem;height:7.5rem;border-radius:50%;background:var(--r);color:var(--cream);display:grid;place-items:center;text-align:center;font:1.5rem/1 'Bagel Fat One',sans-serif;transform:rotate(12deg);z-index:2}
+@media (prefers-reduced-motion:no-preference){.badge{animation:w 3.2s ease-in-out infinite}@keyframes w{50%{transform:rotate(4deg) scale(1.07)}}}
+section{padding:4rem 5vw}
+.menu h2,.how h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--g);margin-bottom:.6rem}
+.menu>p{margin:0 0 2.5rem;max-width:34rem}
+.dish{display:flex;gap:2rem;align-items:center;max-width:56rem;margin:0 auto 2.8rem}
+.dish:nth-child(odd){flex-direction:row-reverse}
+.dish img{width:min(42%,15rem);aspect-ratio:1;object-fit:cover;border:6px solid var(--y);box-shadow:6px 6px 0 var(--g);border-radius:2rem;transform:rotate(-3deg);flex:none}
+.dish:nth-child(even) img{border-radius:50%;transform:rotate(3deg)}
+.dish h3{font-size:1.9rem;color:var(--r);margin-bottom:.5rem}.dish p{margin:0 0 1rem}
+.how{background:var(--g);color:var(--cream)}.how h2{color:var(--y)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:56rem;margin-top:1.5rem}
+.steps h3{font-size:1.5rem;color:var(--y);margin-bottom:.4rem}.steps p{margin:0}
+.cta{text-align:center}.cta h2{font-size:clamp(2.4rem,6vw,4rem);color:var(--g);margin-bottom:1.2rem;text-shadow:3px 3px 0 var(--cream)}
+footer{background:var(--ink);color:var(--cream);padding:1.5rem 5vw;text-align:center;font-size:.95rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.dish,.dish:nth-child(odd){flex-direction:column;text-align:center;gap:1.4rem}.dish img{width:min(70%,16rem)}}
+.note{display:inline-block;background:var(--g);color:var(--y);font:1.4rem/1.1 'Bagel Fat One',sans-serif!important;padding:.6rem 1.2rem;border-radius:1rem;transform:rotate(-2deg);margin:0 0 1.5rem!important}
+.perks{background:var(--g);color:var(--cream);display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 2rem;padding:1rem 5vw;font-weight:800}
+.serve{text-align:center}.serve h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--g);margin-bottom:2rem}
+.occ{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;max-width:56rem;margin:0 auto;font-size:2.4rem}
+.occ div{background:var(--y);border:4px solid var(--g);border-radius:1.5rem;padding:1.4rem .8rem;box-shadow:5px 5px 0 var(--r)}
+.occ h3{font-size:1.3rem;color:var(--g);margin-top:.5rem}.occ p{margin:.3rem 0 0;font-size:.95rem}
+.big{margin:0 0 1.2rem;font:clamp(2rem,6vw,3.2rem) 'Bagel Fat One',sans-serif}.big a{color:var(--r);text-decoration:none}
+@media (max-width:760px){.occ{grid-template-columns:1fr 1fr}}
